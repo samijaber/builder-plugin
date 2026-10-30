@@ -35,6 +35,9 @@ Plugins run inside the Builder app and can import the host's `@builder.io/app-co
 ## Publish
 
 ```bash
-npm login
-npm publish
+npm login        # once
+npm run release  # patch bump (default)
+npm run release -- minor
 ```
+
+The script requires a clean `main`, runs the type check and build, bumps the version only if the current one is already on npm, publishes, then pushes the commit and tag.
