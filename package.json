@@ -1,0 +1,30 @@
+{
+  "name": "@samijaber/builder-plugin",
+  "version": "0.1.0",
+  "description": "Personal Builder.io plugin that customizes the Builder UI (Agent tab first and opened by default).",
+  "license": "MIT",
+  "author": "Sami Jaber",
+  "type": "module",
+  "main": "dist/plugin.system.js",
+  "unpkg": "dist/plugin.system.js",
+  "jsdelivr": "dist/plugin.system.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "tsc": "tsc --noEmit",
+    "prepublishOnly": "npm run tsc && npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.2",
+    "mobx": "^6.13.5",
+    "rollup": "^4.34.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3"
+  }
+}
