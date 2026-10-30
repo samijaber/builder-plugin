@@ -11,10 +11,10 @@ Personal Builder.io plugin that customizes the Builder UI.
 In Builder, go to Account Settings > Plugins and add:
 
 ```
-@samijaber/builder-plugin
+https://cdn.jsdelivr.net/npm/@samijaber/builder-plugin/dist/plugin.system.js
 ```
 
-Builder resolves bare package names through jsDelivr, which serves `dist/plugin.system.js`. To pin a version, use `@samijaber/builder-plugin@0.1.0`, or paste a full URL. Non-`@builder.io` plugins need the `privatePlugins` feature on the org.
+Builder rejects bare package names ("bad url") unless they start with `@builder.io/` or are in its curated plugin library, so use the full URL. Pin a version by adding it after the package name (`@samijaber/builder-plugin@0.1.1`). jsDelivr caches unpinned URLs for up to 12 hours after a release. URL plugins also need the `privatePlugins` feature on the org.
 
 Plugins are installed per organization, so every member's browser loads the code. This plugin only acts when the signed-in user's id matches `OWNER_USER_ID` in `src/index.ts`; for everyone else it does nothing.
 
