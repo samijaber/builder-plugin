@@ -1,6 +1,6 @@
 {
   "name": "@samijaber/builder-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Personal Builder.io plugin that customizes the Builder UI (Agent tab first and opened by default).",
   "license": "MIT",
   "author": "Sami Jaber",
