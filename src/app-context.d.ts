@@ -5,6 +5,7 @@ declare module '@builder.io/app-context' {
   }
 
   interface AppState {
+    user: { id: string | null };
     fusion?: {
       isAgentTabEnabled: boolean;
       initState: { isComplete: boolean };

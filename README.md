@@ -14,7 +14,9 @@ In Builder, go to Account Settings > Plugins and add:
 @samijaber/builder-plugin
 ```
 
-Builder resolves bare package names through unpkg, which serves `dist/plugin.system.js`. To pin a version, use `@samijaber/builder-plugin@0.1.0`, or paste a full URL.
+Builder resolves bare package names through jsDelivr, which serves `dist/plugin.system.js`. To pin a version, use `@samijaber/builder-plugin@0.1.0`, or paste a full URL. Non-`@builder.io` plugins need the `privatePlugins` feature on the org.
+
+Plugins are installed per organization, so every member's browser loads the code. This plugin only acts when the signed-in user's id matches `OWNER_USER_ID` in `src/index.ts`; for everyone else it does nothing.
 
 ## Develop
 
