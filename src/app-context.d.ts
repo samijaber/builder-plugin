@@ -2,6 +2,7 @@ declare module '@builder.io/app-context' {
   interface FusionEditor {
     interactMode: boolean;
     currentProject?: { value?: { id?: string } };
+    currentBranch?: { id?: string };
   }
 
   interface AppState {
